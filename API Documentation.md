@@ -27,4 +27,18 @@ successfully completed, a 'GO LIVE' date is decided and there is a cutover to th
 **To get started contact**
   partnerships@mygate.in
 
-  
+# Security  & Authentication
+Security and Authentication for Express Entry APIs and registered Callback events.
+
+**Express Entry**
+
+|Authentication       | Sandbox & Production Environments |
+| --------------------|-----------------------------------|
+|Dashboard Login      | Username and password will be shared with partner offline. | 
+| x-api-key      | Partner API access key visible on the dashboard after login.|
+
+**Registered Callback Events**
+|Authentication       | Sandbox & Production Environments |
+| --------------------|-----------------------------------|
+|Callback API Access Key| Header name and value to be shared by partner as part of integration|
+| Callback Basic Auth| Basic authentication token to be shared by partner as part of integration|
