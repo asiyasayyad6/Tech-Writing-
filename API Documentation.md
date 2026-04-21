@@ -15,9 +15,16 @@ The reduced friction has twofold advantage:
 The integration phase typically takes not more that a week and is supported by MyGate's Partner Engineering Team. Once the integration is 
 successfully completed, a 'GO LIVE' date is decided and there is a cutover to the production environment by both the partner and MyGate Platform.
 
-** MyGate Platform supports three interrelated sets of APIs as part of Express Entry:**
+**MyGate Platform supports three interrelated sets of APIs as part of Express Entry:**
 
 * Delivery EAR APIs
 * Partner Match APIs
 * Geofence APIs
+# Pre-Requisites
+* Offline exchange of MyGate Express Entry APIs credentials is completed.
+* Offline exchange of Partner Logo, POC Details. Callback URL and Callback Authentication (if any).
+
+**To get started contact**
+  partnerships@mygate.in
+
   
