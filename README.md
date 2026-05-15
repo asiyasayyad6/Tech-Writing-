@@ -16,6 +16,9 @@ https://api.ecoroute.com/v1
 ```
 ### 3. Endpoint: Optimize Route
 ```http
-POST /routes/optimize
+POST/routes/optimize
 ```
 Calculates the most carbon-efficient path between an origin and destination based on the selected vehicle profile.
+**Request Headers**
+| Header | Type | Description |
+| ```http Content-Type | string ```| Must be set to ``` http application/json```|
