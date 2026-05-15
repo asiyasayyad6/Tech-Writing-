@@ -13,4 +13,4 @@ Authorization: Bearer YOUR_API_KEY
 All API requests must be directed to the following base production URL:
 ```http
 https://api.ecoroute.com/v1
-````
+```
