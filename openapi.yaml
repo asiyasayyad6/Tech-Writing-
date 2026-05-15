@@ -1,0 +1,53 @@
+openapi: 3.0.3
+info:
+  title: EcoRoute API
+  description: API to calculate and optimize eco-friendly logistics and shipping routes.
+  version: 1.0.0
+servers:
+  - url: https://api.ecoroute.com/v1
+paths:
+  /routes/optimize:
+    post:
+      summary: Calculate eco-friendly shipping route
+      description: Returns the optimal route between two points minimizing carbon emissions.
+      operationId: optimizeRoute
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - origin
+                - destination
+                - vehicle_type
+              properties:
+                origin:
+                  type: string
+                  example: "Mumbai, IN"
+                destination:
+                  type: string
+                  example: "Pune, IN"
+                vehicle_type:
+                  type: string
+                  enum: [electric_truck, diesel_heavy, rail]
+                  example: "electric_truck"
+      responses:
+        '200':
+          description: Optimization calculation successful.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  distance_km:
+                    type: number
+                    example: 148.5
+                  estimated_co2_kg:
+                    type: number
+                    example: 12.4
+                  estimated_time_hours:
+                    type: number
+                    example: 3.5
+        '400':
+          description: Invalid request parameters or unsupported route.
