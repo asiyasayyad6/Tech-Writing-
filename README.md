@@ -14,3 +14,8 @@ All API requests must be directed to the following base production URL:
 ```http
 https://api.ecoroute.com/v1
 ```
+### 3. Endpoint: Optimize Route
+```http
+POST /routes/optimize
+```
+Calculates the most carbon-efficient path between an origin and destination based on the selected vehicle profile.
