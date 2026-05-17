@@ -21,3 +21,43 @@ Retrieves a list of all to-do tasks available in the system.
 ```bash```
 
 curl --location '[https://jsonplaceholder.typicode.com/todos](https://jsonplaceholder.typicode.com/todos)'
+
+#### Sample Response (200 OK)
+```JSON```
+
+`[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "delectus aut autem",
+    "completed": false
+  }
+]`
+### 2. Get Task by ID
+Retrieves the details of a single specific task.
+* **HTTP Method:** `GET`
+* **Path:** `/todos/{id}`
+* Path Parameters:
+  | Parameter | Type | Required | Description |
+  |-----------|------|----------|-------------|
+  |`id`| integer | Yes | The unique identifier of the task.|
+  
+   #### Code Example (cURL)
+```bash```
+
+curl --location '[https://jsonplaceholder.typicode.com/todos/1](https://jsonplaceholder.typicode.com/todos/1)'
+
+#### Sample Response (200 OK)
+```JSON```
+
+`{
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+}`
+
+#### Sample Response (404 Not Found)
+Returned if the requested task ID does not exist.
+```JSON```
+`{}`
