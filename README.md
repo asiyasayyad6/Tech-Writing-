@@ -25,7 +25,7 @@ Calculates the most carbon-efficient path between an origin and destination base
 | Header | Type | Description |
 |--------|------|-------------|
 | `Content-Type` | `string`| Must be set to `application/json`|
-|`Authorization` | `http string`| `http Bearer <YOUR_TOKEN>`|
+|`Authorization` | `string`| `Bearer <YOUR_TOKEN>`|
 
 **Request Body Parameters**
 
@@ -46,3 +46,19 @@ Calculates the most carbon-efficient path between an origin and destination base
   }'
   ```
 
+**Response Example (200 OK)**
+```
+JSON
+{
+  "distance_km": 148.5,
+  "estimated_co2_kg": 12.4,
+  "estimated_time_hours": 3.5
+}
+```
+### 4. Error Handling
+The API returns standard HTTP status codes. If a request fails, the response payload contains an error message explaining why:
+| Code | Status | Description |
+|------|--------|-------------|
+|`200`| OK | Success|
+| `400`| Bad Request | Missing required parameters or unrecognised city data. | 
+| `401`| Unauthorised | API Key missing or invalid. |
