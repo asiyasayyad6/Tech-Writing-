@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  title: Task Manager API
+  description: A simple API to manage user tasks and to-do lists for a portfolio project.
+  version: 1.0.0
+servers:
+  - url: https://jsonplaceholder.typicode.com
+    description: Mock production server
+paths:
+  /todos:
+    get:
+      summary: Retrieve a list of tasks
+      description: Fetches a list of to-do tasks. Supports filtering by completion status via query parameters.
+      parameters:
+        - name: completed
+          in: query
+          description: Filter tasks by their completion status.
+          required: false
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: A successful response returning an array of tasks.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+  /todos/{id}:
+    get:
+      summary: Get a task by ID
+      description: Returns a single task object based on the unique ID provided in the path.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The unique identifier of the task.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Task found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+        '404':
+          description: Task not found.
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        userId:
+          type: integer
+          example: 1
+        id:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: "Delectus aut autem"
+        completed:
+          type: boolean
+          example: false
