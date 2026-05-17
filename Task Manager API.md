@@ -19,4 +19,5 @@ Retrieves a list of all to-do tasks available in the system.
 
   #### Code Example (cURL)
 ```bash```
+
 curl --location '[https://jsonplaceholder.typicode.com/todos](https://jsonplaceholder.typicode.com/todos)'
