@@ -48,6 +48,7 @@ Retrieves the details of a single specific task.
 curl --location '[https://jsonplaceholder.typicode.com/todos/1](https://jsonplaceholder.typicode.com/todos/1)'
 
 #### Sample Response (200 OK)
+
 ```JSON```
 
 `{
