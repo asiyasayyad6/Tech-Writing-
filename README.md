@@ -24,4 +24,5 @@ Calculates the most carbon-efficient path between an origin and destination base
 
 | Header | Type | Description |
 |--------|------|-------------|
-| ```http Content-Type | string ```| Must be set to ``` http application/json```|
+| ```http Content-Type``` | ```http string ```| Must be set to ``` http application/json```|
+|```http Authorization``` | ```http string ```| ```http Bearer <YOUR_TOKEN>``` |
