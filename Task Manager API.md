@@ -60,5 +60,7 @@ curl --location '[https://jsonplaceholder.typicode.com/todos/1](https://jsonplac
 
 #### Sample Response (404 Not Found)
 Returned if the requested task ID does not exist.
+
 ```JSON```
+
 `{}`
