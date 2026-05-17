@@ -23,5 +23,5 @@ Calculates the most carbon-efficient path between an origin and destination base
 **Request Headers**
 
 | Header | Type | Description |
-
+|--------|------|-------------|
 | ```http Content-Type | string ```| Must be set to ``` http application/json```|
