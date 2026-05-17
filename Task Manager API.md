@@ -18,5 +18,5 @@ Retrieves a list of all to-do tasks available in the system.
   | `completed` | boolean | No | Filters tasks by their completion status (`true` or `false`). |
 
   #### Code Example (cURL)
-```bash
+```bash```
 curl --location '[https://jsonplaceholder.typicode.com/todos](https://jsonplaceholder.typicode.com/todos)'
